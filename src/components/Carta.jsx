@@ -42,7 +42,7 @@ const frases = [
    
   " a tirarte aunque no sepas si vas a llegar.",
 
-  " te van a neter goles que no vas a poder atajar.",
+  " te metieron goles que no pudiste atajar.",
 
   " pero eso nunca significó que tenías que dejar de jugar.",
 
