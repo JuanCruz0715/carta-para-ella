@@ -66,7 +66,7 @@ const frases = [
 
   " y estoy ORGULLOSO de vos. ❤️",
 
-  " y para mis un ejemplo,siempre o voy a decir ❤️",
+  " y para mis sos un ejemplo,siempre lo voy a decir ❤️",
 
   " no sabés todo lo que va a llegar a tu vida.",
 
@@ -94,7 +94,7 @@ const frases = [
 
   " YO si te entiendo, mimu. y te apoyo y no se si seguire estando, o terminamos casandonos por siempre",
  
-  " me sale del ama decirte esto ",
+  " que sea lo que dios y el universo quiera, me sale del ama decirte estom, perdon jeje ",
 
   " y quería avisarte que esto...",
 
