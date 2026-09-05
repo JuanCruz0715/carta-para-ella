@@ -1,0 +1,533 @@
+/* ============================================
+   IMPORTAR FUENTES - SIEMPRE AL PRINCIPIO
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&display=swap');
+
+/* ============================================
+   RESET Y ESTILOS BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+}
+
+.carta-container {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+}
+
+/* ============================================
+   CARD ESTILO ANOTADOR / POST-IT
+   ============================================ */
+.card {
+  background: #fffef7;
+  background-image: 
+    linear-gradient(#f0ece4 1px, transparent 1px);
+  background-size: 100% 30px;
+  background-position: 0 20px;
+  border-radius: 20px;
+  padding: 30px 25px 25px;
+  width: 100%;
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #e8e0d5;
+  animation: aparecer 0.8s ease-out;
+}
+
+/* Efecto de hoja de cuaderno - líneas sutiles */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 29px,
+    rgba(200, 180, 160, 0.08) 29px,
+    rgba(200, 180, 160, 0.08) 30px
+  );
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Esquina doblada (efecto papel) */
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, transparent 50%, #e8e0d5 50%);
+  border-radius: 0 0 20px 0;
+  pointer-events: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   TORTA DE CUMPLEAÑOS (ÍCONO PRINCIPAL)
+   ============================================ */
+.icono-torta {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 8px;
+  animation: latir 2s ease-in-out infinite;
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 4px 15px rgba(233, 30, 99, 0.15));
+}
+
+@keyframes latir {
+  0%, 100% { 
+    transform: scale(1) rotate(-3deg); 
+  }
+  50% { 
+    transform: scale(1.1) rotate(3deg); 
+  }
+}
+
+/* ============================================
+   SUBTÍTULO
+   ============================================ */
+.subtitle {
+  font-size: 1.1rem;
+  color: #6d4c41;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+.destacado {
+  color: #c2185b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #c2185b, #e91e63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   CONTENEDOR DEL MENSAJE
+   ============================================ */
+.mensaje-container {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.mensaje {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #3e2723;
+  font-weight: 500;
+  min-height: 130px;
+  padding: 20px 15px;
+  border-radius: 16px;
+  background: rgba(255, 248, 240, 0.6);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-left: 4px solid #e91e63;
+  text-align: left;
+}
+
+/* ============================================
+   MENSAJE FINAL
+   ============================================ */
+.mensaje-final {
+  animation: aparecerTexto 1s ease-out;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes aparecerTexto {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.mensaje-final p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #c2185b;
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(233, 30, 99, 0.2);
+}
+
+.emoji-grande {
+  font-size: 3.5rem;
+  margin-top: 12px;
+  animation: latir 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   CURSOR PARPADEANTE
+   ============================================ */
+.cursor {
+  animation: blink 0.8s step-end infinite;
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   BOTONES ESTILO PAPEL CON LETRA MANUSCRITA
+   ============================================ */
+.btn-siguiente,
+.btn-musica {
+  border: none;
+  padding: 16px 25px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: relative;
+  font-family: 'Caveat', 'Patrick Hand', cursive;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  
+  /* EFECTO PAPEL */
+  background: #fcf8f0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(200, 180, 160, 0.05) 2px,
+      rgba(200, 180, 160, 0.05) 4px
+    ),
+    radial-gradient(ellipse at 20% 50%, rgba(255, 235, 200, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 235, 200, 0.2) 0%, transparent 40%);
+  
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    2px 3px 8px rgba(0, 0, 0, 0.06),
+    0 -1px 0 rgba(200, 180, 160, 0.2);
+  
+  border: 1px solid #e8e0d5;
+  transform: rotate(-0.5deg);
+  color: #4a3728;
+}
+
+/* Segunda capa de textura papel */
+.btn-siguiente::before,
+.btn-musica::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(200, 180, 160, 0.02) 10px,
+      rgba(200, 180, 160, 0.02) 11px
+    );
+  pointer-events: none;
+}
+
+/* Efecto de "etiqueta" con borde irregular sutil */
+.btn-siguiente::after,
+.btn-musica::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 13px;
+  background: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    linear-gradient(to top, rgba(200, 180, 160, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   BOTÓN "SIGUIENTE" - Papel con tono rosado
+   ============================================ */
+.btn-siguiente {
+  background: #fcf6f0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(200, 180, 160, 0.05) 2px,
+      rgba(200, 180, 160, 0.05) 4px
+    ),
+    radial-gradient(ellipse at 70% 30%, rgba(233, 30, 99, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 70%, rgba(233, 30, 99, 0.04) 0%, transparent 50%);
+  
+  border-color: #f0d8d0;
+  color: #6d3b4a;
+  box-shadow: 
+    0 2px 12px rgba(233, 30, 99, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    2px 3px 8px rgba(0, 0, 0, 0.06),
+    0 -1px 0 rgba(200, 180, 160, 0.2);
+}
+
+.btn-siguiente:hover:not(:disabled) {
+  transform: rotate(-0.3deg) translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(233, 30, 99, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    2px 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #e8c8bd;
+}
+
+.btn-siguiente:active:not(:disabled) {
+  transform: rotate(0.5deg) scale(0.97);
+  box-shadow: 
+    0 2px 8px rgba(233, 30, 99, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   BOTÓN "MÚSICA" - Papel con tono violeta
+   ============================================ */
+.btn-musica {
+  background: #f6f0f8;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(200, 180, 160, 0.05) 2px,
+      rgba(200, 180, 160, 0.05) 4px
+    ),
+    radial-gradient(ellipse at 30% 40%, rgba(106, 27, 154, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 60%, rgba(106, 27, 154, 0.03) 0%, transparent 50%);
+  
+  border-color: #d8c8e0;
+  color: #4a2d5a;
+  box-shadow: 
+    0 2px 12px rgba(106, 27, 154, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    2px 3px 8px rgba(0, 0, 0, 0.06),
+    0 -1px 0 rgba(200, 180, 160, 0.2);
+  margin-top: 6px;
+}
+
+.btn-musica:hover {
+  transform: rotate(0.3deg) translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(106, 27, 154, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    2px 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d0bdd8;
+}
+
+.btn-musica:active {
+  transform: rotate(-0.5deg) scale(0.97);
+  box-shadow: 
+    0 2px 8px rgba(106, 27, 154, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   BOTÓN DESHABILITADO
+   ============================================ */
+.btn-siguiente:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  filter: grayscale(0.2);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #8d6e63;
+  opacity: 0.7;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   INDICADOR DE MÚSICA
+   ============================================ */
+.musica-indicador {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: latir 1.5s ease-in-out infinite;
+  z-index: 100;
+  border: 2px solid #f8bbd0;
+}
+
+/* ============================================
+   ANIMACIÓN CONFETI
+   ============================================ */
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 480px) {
+  .card {
+    padding: 25px 18px 20px;
+    min-height: 480px;
+    border-radius: 16px;
+  }
+
+  .card::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icono-torta {
+    font-size: 3.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .destacado {
+    font-size: 1rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+    min-height: 110px;
+    padding: 15px 12px;
+  }
+
+  .mensaje-final p {
+    font-size: 1.4rem;
+  }
+
+  .btn-siguiente,
+  .btn-musica {
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 10px;
+  }
+
+  .emoji-grande {
+    font-size: 2.8rem;
+  }
+
+  .musica-indicador {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    padding: 20px 14px 18px;
+    min-height: 420px;
+  }
+
+  .icono-torta {
+    font-size: 3.2rem;
+  }
+
+  .mensaje {
+    font-size: 0.9rem;
+    min-height: 90px;
+    padding: 12px 10px;
+  }
+
+  .mensaje-final p {
+    font-size: 1.2rem;
+  }
+
+  .btn-siguiente,
+  .btn-musica {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}
