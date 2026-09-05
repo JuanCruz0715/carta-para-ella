@@ -39,14 +39,14 @@ const frases = [
   " porque vos nunca PARASTE. Nunca.",
 
   " aprendiste a estar atrás, a cuidar, a aguantar,",
-
-  " tenés un gran superpoder... uno de tantos igual jajajaja.",
    
-  "a tirarte aunque no sepas si vas a llegar.",
+  " a tirarte aunque no sepas si vas a llegar.",
 
-  " te van a pegar goles que no vas a poder atajar.",
+  " te van a neter goles que no vas a poder atajar.",
 
   " pero eso nunca significó que tenías que dejar de jugar.",
+
+  " tenés un gran superpoder... uno de tantos igual jajajaja.",
 
   " SOS INCREIBLE CULIAUU y especial jeje",
 
@@ -65,6 +65,8 @@ const frases = [
   " y hoy estás muy en esa etapa...",
 
   " y estoy ORGULLOSO de vos. ❤️",
+
+  " y para mis un ejemplo,siempre o voy a decir ❤️",
 
   " no sabés todo lo que va a llegar a tu vida.",
 
@@ -86,11 +88,15 @@ const frases = [
 
   " para mí estás perfecta, reina.",
 
-  " así como sos.",
+  " estas en el camino indicado  y ahora que entendiste muchas cosas",
 
-  " te entiendo, mimu.",
+   " el camino va a estar mucho mas claro",
 
-  " y justamente por eso quería avisarte que esto...",
+  " YO si te entiendo, mimu. y te apoyo y no se si seguire estando, o terminamos casandonos por siempre",
+ 
+  " me sale del ama decirte esto ",
+
+  " y quería avisarte que esto...",
 
   " recién empieza. 💫",
 
@@ -294,7 +300,7 @@ export default function Carta() {
         </button>
 
         <div className="footer">
-          {!mostrarMensajeFinal ? 'Toca el botón para continuar' : '✨ Para ti, con todo mi amor ✨'}
+          {!mostrarMensajeFinal ? 'Toca el botón para continuar' : '✨ i am milu ✨'}
         </div>
 
         <audio ref={audioRef} src="/cancion.mp3" loop />
