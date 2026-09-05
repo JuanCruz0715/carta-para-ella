@@ -28,7 +28,7 @@ const frases = [
 
   " y aunque a veces duela, también eso es madurar.",
 
-  " ES PARTE DE LA VIDA.",
+  " ES PARTE DE LA VIDA....",
 
   " no siempre vas a estar motivada, ni vas a tener ganas de hacer todo...",
 
@@ -44,11 +44,11 @@ const frases = [
    
   "a tirarte aunque no sepas si vas a llegar.",
 
-   "te van a pegar goles que no vas a poder atajar.",
+  " te van a pegar goles que no vas a poder atajar.",
 
-  "pero eso nunca significó que tenías que dejar de jugar.",
+  " pero eso nunca significó que tenías que dejar de jugar.",
 
-   "SOS INCREIBLE CULIAUU y especial jeje",
+  " SOS INCREIBLE CULIAUU y especial jeje",
 
   " ¿y sabés por qué sos tan especial? y no solo para mi te aseguro que para muchisima gente ",
 
@@ -70,7 +70,7 @@ const frases = [
 
   " nadie lo sabe.",
 
-   " pero te recuerdo que van  a venir cosas muy buenas y lindas",
+  " pero te recuerdo que van  a venir cosas muy buenas y lindas",
 
   " encima vos ya estás pensando en todo, intentando entenderlo todo, intentando que todo salga bien...",
 
